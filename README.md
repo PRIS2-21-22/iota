@@ -1,2 +1,2 @@
 # iota
-   Implementacion de la operaciones del ágebra de Allen sobre el intervalo
+   Implementacion de la operaciones del álgebra de Allen sobre el intervalo
