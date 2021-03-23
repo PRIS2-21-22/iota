@@ -81,13 +81,13 @@ comparision = {}
 for i in range(0, NUMBER_OF_PERSONS, 1):
     comparision[i] = []
 
-for f, v in comparision.iteritems():
-    for i, k in comparision.iteritems():
+for f, v in comparision.items():
+    for i, k in comparision.items():
         comparision[f].append(ag.tests(persons[f], persons[i]))
 
 first = 0
 second = 0
-for i, l in comparision.iteritems():
+for i, l in comparision.items():
     for k in l:
         if first != second:
             if random.randrange(0, 10) > 6:
