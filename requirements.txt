@@ -1,3 +1,0 @@
-pbr
-pip
-setuptools
