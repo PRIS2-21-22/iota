@@ -63,38 +63,6 @@ class Person(object):
 class AllenAlgebra(object):
 
     NUMBER_OF_PROPERTIES = 7
-
-    # def random_comparision(self, a, b):
-    #     comparision = []
-    #     for i in range(0, self.NUMBER_OF_PROPERTIES, 1):
-    #         comparision.append(random.randrange(-1, 2))
-    #     while self.valid(a, b, comparision) == True:
-    #         return self.random_comparision
-    #     return comparision
-    #
-    # def valid(self, a = Person, b = Person, comparision = []):
-    #
-    #     for i in range(0, self.NUMBER_OF_PROPERTIES, 1):
-    #         test, actual, comparision = self.tests_exclude(a, b, comparision, i)
-    #         print test
-    #         print actual
-    #         print comparision
-    #         raw_input("Next compare...")
-    #
-
-    # def tests_exclude(self, a = Person, b = Person, actual = [], index = -1):
-    #     comparision = []
-    #     if index != 0: comparision.append(self.before(a, b))
-    #     if index != 1: comparision.append(self.meets(a, b))
-    #     if index != 2: comparision.append(self.overlaps(a, b))
-    #     if index != 3: comparision.append(self.starts(a, b))
-    #     if index != 4: comparision.append(self.during(a, b))
-    #     if index != 5: comparision.append(self.finishes(a, b))
-    #     if index != 6: comparision.append(self.equals(a, b))
-    #     for i in range(0, self.NUMBER_OF_PROPERTIES, 1):
-    #         if comparision[i] != actual[i]: return False, actual, comparision
-    #     return True
-
     def generateQuestion(self, level, persons):
         a = random.randrange(0, len(persons))
         if a > len(persons) / 2:
@@ -121,27 +89,26 @@ class AllenAlgebra(object):
     def toString(self, a = Person, b = Person, comparision = []):
         if comparision[0] == 1: print (a.name+" was born and died before "+b.name)
         if comparision[0] == -1: print (a.name+" was born and died after "+b.name)
-        if comparision[0] == 0: pass
+        
 
         if comparision[1] == 1: print (a.name+" died when "+b.name+" was born")
         if comparision[1] == -1: print (b.name+" died when "+a.name+" was born")
-        if comparision[1] == 0: pass
 
         if comparision[2] == 1: print (a.name+" was born before "+b.name+" was born, died after "+b.name+" was born and "+b.name+" died after "+a.name+" was dead")
         if comparision[2] == -1: print (b.name+" was born before "+a.name+" was born, died after "+a.name+" was born and "+a.name+" died after "+b.name+" was dead")
-        if comparision[2] == 0: pass
+        
 
         if comparision[3] == 1: print (a.name+" was born in the same year and died before "+b.name)
         if comparision[3] == -1: print (b.name+" was born in the same year and died before "+a.name)
-        if comparision[3] == 0: pass
+    
 
         if comparision[4] == 1: print (a.name+" was born after and died before "+b.name)
         if comparision[4] == -1: print (b.name+" was born after and died before "+a.name)
-        if comparision[4] == 0: pass
+        
 
         if comparision[5] == 1: print (a.name+" died in the same year and born after "+b.name)
         if comparision[5] == -1: print (b.name+" died in the same year and born after "+a.name)
-        if comparision[5] == 0: pass
+        
 
         if comparision[6] == 1: print (a.name+" was born and died in the same year of "+b.name)
         if comparision[6] == -1: print (a.name+" was born, died, or both, in different year of "+b.name)
